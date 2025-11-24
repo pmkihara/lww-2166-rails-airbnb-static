@@ -8,8 +8,8 @@
         <%# Cria uma imagem usando a informação que está na key imageUrl %>
         <img src="<%= flat["imageUrl"] %>" alt="<%= flat["name"] %><" class="card-img-top">
         <div class="card-body">
-          <%# Cria um h2 com o nome do flat %>
-          <h2 class="card-title fs-5"><%= flat["name"] %></h2>
+          <%# Cria um h2 com o nome do flat e um link para cada pagina (localhost:3000/flats/:id) %>
+          <h2 class="card-title fs-5"><%= link_to flat['name'], flat_path(flat['id']) %></h2>
           <%# Cria um p com o a moeda corrente e o valor %>
           <p class="card-text"><%= flat["priceCurrency"] %> <%= flat["price"] %></p>
         </div>

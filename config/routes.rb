@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # Define a rota quando vamos ao caminho-raiz (localhost:3000/)
   root 'flats#index' # FlatsController, ação/método index
+  get 'flats/:id', to: 'flats#show', as: 'flat' # rota para a página de detalhes do flat
 end
