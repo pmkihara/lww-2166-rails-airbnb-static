@@ -1,0 +1,19 @@
+<h1>Flats</h1>
+
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+  <%# Pegamos cada um dos flats (que é uma hash) e criamos um card para cada um deles %>
+  <% @flats.each do |flat| %>
+    <div class="col">
+      <div class="card h-100">
+        <%# Cria uma imagem usando a informação que está na key imageUrl %>
+        <img src="<%= flat["imageUrl"] %>" alt="<%= flat["name"] %><" class="card-img-top">
+        <div class="card-body">
+          <%# Cria um h2 com o nome do flat %>
+          <h2 class="card-title fs-5"><%= flat["name"] %></h2>
+          <%# Cria um p com o a moeda corrente e o valor %>
+          <p class="card-text"><%= flat["priceCurrency"] %> <%= flat["price"] %></p>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
