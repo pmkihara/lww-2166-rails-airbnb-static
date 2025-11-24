@@ -60,3 +60,6 @@ flats = JSON.parse(URI.parse(url).read)
 ```
 
 ## Ver os detalhes de um flat
+
+Vamos criar uma página para ver os detalhes de um flat específico, usando o ID
+do flat na URL, como `/flats/3`.
